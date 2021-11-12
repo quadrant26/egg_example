@@ -16,6 +16,16 @@ class KingController extends Controller {
       }, 5000);
     });
   }
+
+  async getGirlsQuery() {
+    const { ctx } = this;
+    ctx.body = ctx.query;
+  }
+
+  async getGirl2(){
+    const {ctx} = this;
+    ctx.body=ctx.params.name
+  }
 }
 
 module.exports = KingController;
