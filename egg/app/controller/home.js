@@ -10,7 +10,7 @@ class HomeController extends Controller {
 
   async kinger() {
     const { ctx } = this;
-    ctx.body = "<h1>我观青山多妩媚，料青山，观我应如是！</h1>"
+    ctx.body = '<h1>我观青山多妩媚，料青山，观我应如是！</h1>';
   }
 }
 
