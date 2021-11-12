@@ -19,12 +19,16 @@ class KingController extends Controller {
 
   async getGirlsQuery() {
     const { ctx } = this;
-    ctx.body = ctx.query;
+    // ctx.body = ctx.query;
+    const res = await ctx.service.king.getGirlsId('123');
+    ctx.body = res;
   }
 
   async getGirl2(){
     const {ctx} = this;
-    ctx.body=ctx.params.name
+    // ctx.body = ctx.params.name
+    const res = await ctx.service.king.getGirlsId('123');
+    ctx.body = res;
   }
 
   async add() {

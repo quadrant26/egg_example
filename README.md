@@ -31,4 +31,9 @@ Eggjs
   
     ```
         // 
+        const { ctx } = this;
+        ctx.body={
+           status: 200,
+           data: ctx.request.body
+        }
     ```

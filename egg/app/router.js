@@ -6,7 +6,8 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
-  router.get('/kinger', controller.home.kinger);
+  router.get('/kinger', controller.home.testGetGirl);
+  router.get('/testGetGirl', controller.home.testGetGirl);
   router.get('/my', controller.king.index);
   router.get('/getGirls', controller.king.getGirls);
   router.get('/getGirl2/:name', controller.king.getGirl2);
