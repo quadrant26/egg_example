@@ -44,9 +44,38 @@ class KingController extends Controller {
 
   async add() {
     const { ctx } = this;
-    ctx.body={
-      status: 200,
-      data: ctx.request.body
+    ctx.cookies.set("user","sirius.com")
+    ctx.body = {
+      status:200,
+      data:'Cookie添加成功'
+    }
+  }
+
+  async del() {
+    const { ctx } = this;
+    ctx.cookies.set("user",null)
+    ctx.body = {
+      status:200,
+      data:'Cookie删除成功'
+    }
+  }
+
+  async edit() {
+    const { ctx } = this;
+    ctx.cookies.set("user",'bilibili')
+    ctx.body = {
+      status:200,
+      data:'Cookie修改成功'
+    }
+  }
+
+  async show() {
+    const { ctx } = this;
+    const user=ctx.cookies.get("user")
+    console.log(user)
+    ctx.body = {
+      status:200,
+      data:'Cookie显示成功'
     }
   }
 }

@@ -14,4 +14,7 @@ module.exports = app => {
   router.get('/getGirlsQuery', controller.king.getGirlsQuery);
 
   router.post('/add', controller.king.add);
+  router.post('/del', controller.king.del);
+  router.post('/edit', controller.king.edit);
+  router.post('/show', controller.king.show);
 };

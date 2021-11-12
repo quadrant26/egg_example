@@ -9,6 +9,52 @@
 <h1>Hello, Ejs!</h1>
 <% include header.html %>
 
+<div>
+    <button onclick="add()">增加Cookie</button>
+    <button onclick="del()">删除Cookie</button>
+    <button onclick="editor()">修改Cookie</button>
+    <button onclick="show()">查看Cookie</button>
+</div>
+
+<script>
+    function add(){
+        fetch("/add",{
+            method:"post",
+            mode: "no-cors",
+            headers:{
+                "Content-type":"application/json"
+            }
+        });
+    }
+    function del(){
+        fetch("/del",{
+            method:"post",
+            mode: "no-cors",
+            headers:{
+                "Content-type":"application/json"
+            }
+        });
+    }
+    function editor(){
+        fetch("/editor",{
+            method:"post",
+            mode: "no-cors",
+            headers:{
+                "Content-type":"application/json"
+            }
+        });
+    }
+    function show(){
+        fetch("/show",{
+            method:"post",
+            mode: "no-cors",
+            headers:{
+                "Content-type":"application/json"
+            }
+        });
+    }
+</script>
+
 <p>欢迎来到红浪漫~~</p>
 <p>现在由<%= id %>号技师，为你服务!</p>
 <p>你好，我是<%= name %><%= age %>岁,专业技能是<%= skill %></p>
