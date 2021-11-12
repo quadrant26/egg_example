@@ -6,5 +6,14 @@
 </head>
 <body>
 <h1>Hello, Ejs!</h1>
+
+<p>欢迎来到红浪漫~~</p>
+<p>现在由<%= id %>号技师，为你服务!</p>
+<p>你好，我是<%= name %><%= age %>岁,专业技能是<%= skill %></p>
+<ul>
+    <% for(var i=0; i < skills.length; i++){ %>
+    <li><%= skills[i] %></li>
+    <%}%>
+</ul>
 </body>
 </html>

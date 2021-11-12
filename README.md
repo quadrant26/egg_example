@@ -60,7 +60,7 @@ Eggjs
         }
     };
     config.ejs={
-
+      delimiter: "$", // 修改默认的分隔符号
     }
   ```
 + 使用

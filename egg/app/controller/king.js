@@ -6,7 +6,17 @@ class KingController extends Controller {
   async index() {
     const { ctx } = this;
     // ctx.body = '<h1>接天莲叶无穷碧，映日荷花别样红</h1>';
-    await ctx.render('king.html')
+    await ctx.render('king.html', {
+      id: 1204,
+      name: 'Blue',
+      age: 18,
+      skill: '按摩',
+      skills:[
+        '泰式按摩',
+        '精油搓背',
+        '水疗SPA'
+      ]
+    })
   }
 
   async getGirls() {
