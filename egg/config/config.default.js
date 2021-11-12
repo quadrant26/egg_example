@@ -23,6 +23,16 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  // 配置 ejs
+  config.view = {
+    mapping: {
+      '.html': 'ejs'
+    }
+  }
+  config.ejs = {
+
+  }
+
   return {
     ...config,
     ...userConfig,

@@ -37,3 +37,38 @@ Eggjs
            data: ctx.request.body
         }
     ```
+  
+### ejs 模版引擎
+  
++ instll
+  
+  ```yarn add egg-view-ejs```
+
++ 配置
+  
+  ```
+    // /config/plugin.js
+    exports.ejs = {
+        enable :true,
+        package:"egg-view-ejs"
+    }
+    
+    /config /config.default.js
+    config.view = {
+        mapping : {
+            ".html":"ejs"
+        }
+    };
+    config.ejs={
+
+    }
+  ```
++ 使用
+  
+  ```
+    @Controller
+    async index() {
+      const {ctx} = this;
+      await ctx.render('king.html');
+    }
+  ```
