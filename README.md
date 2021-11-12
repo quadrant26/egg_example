@@ -61,6 +61,7 @@ Eggjs
     };
     config.ejs={
       delimiter: "$", // 修改默认的分隔符号
+      prefix:"/assets/", // 修改静态资源的路径前缀
     }
   ```
 + 使用
@@ -71,4 +72,11 @@ Eggjs
       const {ctx} = this;
       await ctx.render('king.html');
     }
+  ```
+  
+  ```
+      // 载入其他的模版
+      <% include header.html %>
+  
+      // 配置静态资源
   ```
