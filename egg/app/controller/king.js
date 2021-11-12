@@ -26,6 +26,14 @@ class KingController extends Controller {
     const {ctx} = this;
     ctx.body=ctx.params.name
   }
+
+  async add() {
+    const { ctx } = this;
+    ctx.body={
+      status: 200,
+      data: ctx.request.body
+    }
+  }
 }
 
 module.exports = KingController;
